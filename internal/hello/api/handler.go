@@ -2,8 +2,9 @@ package api
 
 import (
 	"errors"
-	"github.com/ValeryBMSTU/web-10/pkg/vars"
 	"net/http"
+
+	"github.com/Degreezee/labwork10/pkg/vars"
 
 	"github.com/labstack/echo/v4"
 )
@@ -39,7 +40,7 @@ func (srv *Server) PostHello(e echo.Context) error {
 
 	err = srv.uc.SetHelloMessage(*input.Msg)
 	if err != nil {
-		if errors.Is(err, vars.ErrAlreadyExist) {
+		if errors.Is(err, vars.ErrorAlreadyExists) {
 			return e.String(http.StatusConflict, err.Error())
 		}
 		return e.String(http.StatusInternalServerError, err.Error())

@@ -1,0 +1,13 @@
+ip: "127.0.0.1"
+port: 8082
+api:
+  max_message_size: 32
+usecase:
+  start_message: "Hello, "
+  end_message: "!"
+db:
+  host: "localhost"
+  port: 5432
+  user: "ps1"
+  password: "1103"
+  dbname: "lr8"
