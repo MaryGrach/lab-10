@@ -3,5 +3,6 @@ package vars
 import "errors"
 
 var (
-	ErrAlreadyExist = errors.New("already exist")
+	ErrorAlreadyExists    = errors.New("Already exist")
+	ErrorDBNotInitialized = errors.New("DB is not initialized")
 )
